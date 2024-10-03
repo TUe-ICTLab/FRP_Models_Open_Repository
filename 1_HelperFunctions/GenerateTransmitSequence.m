@@ -53,8 +53,8 @@ else    % dual pol case
         Data_mnxy  = Data_mx'*Data_mx + Data_my'*Data_my;
         Data_mnpx  = reshape(Data_mnxy(:)*Data_mx,Seql,Seql,Seql);
         Data_mnpy  = reshape(Data_mnxy(:)*Data_my,Seql,Seql,Seql);
-        Trip_tempx = (Cu2Vec(Data_mnpx,N)).';   
-        Trip_tempy = (Cu2Vec(Data_mnpy,N)).';   
+        Trip_tempx = (Cub2Vec(Data_mnpx,N)).';   
+        Trip_tempy = (Cub2Vec(Data_mnpy,N)).';   
         Tripx(iIter,:) = Trip_tempx;
         Tripy(iIter,:) = Trip_tempy;
     end
